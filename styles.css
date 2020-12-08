@@ -7,9 +7,20 @@
     width: 50%;
     height: 250px;
     background-color: #FDFF65;
+    position: relative;
 }
-#lt1{
+
+.store{
+    height: 100%;
+    width: 100%;
+    margin-top: -80%;
     display: block;
+    position: absolute;
+}
+
+
+#lt1{
+    
     margin-top: 0;
     -webkit-transform: none;
         -moz-transform: none;
@@ -23,7 +34,7 @@
             -o-transform: none;
 }
 .latte{
-    display: none;
+   
     width: 100%;
     height: 30px;
     background-color: #f5b994;
