@@ -17,4 +17,4 @@ function action(){
 };
 
 
-val.onchange = () =>{action()};
+val.oninput = () =>{action()};
