@@ -14,131 +14,25 @@
         <div class="container">
  
             <div class="slider-wrapper" >
-                <input type="range" id="niveau" min="0" max="10" onchange="action()" value="10" step="1">
+                <input type="range" id="niveau" min="0" max="10" value="10" step="0.5">
             </div>
             
         </div>
         <div class="fenetre">
-            
-            <div class="latte" id="lt1"></div>
-            <div class="latte" id="lt2"></div>
-            <div class="latte" id="lt3"></div>
-            <div class="latte" id="lt4"></div>
-            <div class="latte" id="lt5"></div>
-            <div class="latte" id="lt6"></div>
-            <div class="latte" id="lt8"></div>
-            <div class="latte" id="lt9"></div>
-            <div class="latte" id="lt10"></div>
-            
-            
+            <div class="store" id="store">
+                <div class="latte" id="lt1"></div>
+                <div class="latte" id="lt2"></div>
+                <div class="latte" id="lt3"></div>
+                <div class="latte" id="lt4"></div>
+                <div class="latte" id="lt5"></div>
+                <div class="latte" id="lt6"></div>
+                <div class="latte" id="lt8"></div>
+                <div class="latte" id="lt9"></div>
+                <div class="latte" id="lt10"></div>
+            </div>
             
         </div>
 			
     </body>
-    <script>
-        function action(){
-            let lvl = document.getElementById("niveau");
-            let lt = document.getElementsByClassName("latte");
-            /* affichage ou non des lattes selon la valeur de l'input */
-            switch(lvl.value){
-                case '1': 
-                case '0':
-                    for(let i = 1; i < lt.length; i ++){
-                        lt[i].style.display = "block";
-                        lt[i].setAttribute("id","close");
-                    }
-                break;
-                case '2': 
-                    for(let i = 1; i < lt.length-1; i ++){
-                        lt[i].style.display = "block"; 
-                        lt[i].setAttribute("id","");   
-                    }
-                    // disparition des lattes indésirables
-                    lt[8].style.display = "none";
-                break;
-                case '3':
-                    for(let i = 1; i < lt.length-2; i ++){
-                        lt[i].style.display = "block"; 
-                        lt[i].setAttribute("id","");   
-                    }
-                    // disparition des lattes indésirables
-                    for(let i = 7; i < lt.length; i++){
-                        lt[i].style.display = "none";
-                    }
-                break;
-                case '4':
-                    for(let i = 1; i < lt.length-3; i ++){
-                        lt[i].style.display = "block"; 
-                        lt[i].setAttribute("id","");   
-                    }
-                    // disparition des lattes indésirables
-                    for(let i = 6; i < lt.length; i++){
-                        lt[i].style.display = "none";
-                    }
-                    
-                break;
-                case '5':
-                    for(let i = 1; i < lt.length-4; i ++){
-                        lt[i].style.display = "block"; 
-                        lt[i].setAttribute("id","");   
-                    }
-                    // disparition des lattes indésirables
-                    for(let i = 5; i < lt.length; i++){
-                        lt[i].style.display = "none";
-                    }
-                    
-                break;
-                case '6':
-                    for(let i = 1; i < lt.length-5; i ++){
-                        lt[i].style.display = "block";
-                        lt[i].setAttribute("id","");    
-                    }
-                    // disparition des lattes indésirables
-                    for(let i = 4; i < lt.length; i++){
-                        lt[i].style.display = "none";
-                    }
-                   
-                break;
-                case '7':
-                    for(let i = 1; i < lt.length-6; i ++){
-                        lt[i].style.display = "block"; 
-                        lt[i].setAttribute("id","");   
-                    }
-                    // disparition des lattes indésirables
-                    for(let i = 3; i < lt.length; i++){
-                        lt[i].style.display = "none";
-                    }
-                   
-                break;
-                case '8':
-                    for(let i = 1; i < lt.length-7; i ++){
-                        lt[i].style.display = "block";
-                        lt[i].setAttribute("id","");    
-                    }
-                    // disparition des lattes indésirables
-                    for(let i = 2; i < lt.length; i++){
-                        lt[i].style.display = "none";
-                    }
-                    
-                    
-                break;
-                case '9':
-                case '10':
-                    for(let i = 1; i < lt.length-8; i ++){
-                        lt[i].style.display = "block"; 
-                        lt[i].setAttribute("id","");   
-                    }
-                    // disparition des lattes indésirables
-                    for(let i = 1; i < lt.length; i++){
-                        lt[i].style.display = "none";
-                    }
-                    
-                break;
-
-            }
-            
-
-        }
-        
-    </script>
+    <script src="./script.js"></script>
 </html>
